@@ -1,0 +1,389 @@
+/* ========
+    打勾
+=========== */
+.checkbox-container {
+    position: absolute;
+    cursor: pointer;
+    width: 100%;
+    height: 10%;
+    /* background: red; */
+}
+
+.showCheck1 {
+    top: 10.5%;
+}
+
+.showCheck2 {
+    top: 29.5%;
+}
+
+.showCheck3 {
+    top: 45%;
+}
+
+.showCheck4 {
+    top: 60.5%;
+}
+
+.showCheck5 {
+    top: 76%;
+}
+
+.js-checkbox {
+    display: none;
+}
+
+.checkmark {
+    position: absolute;
+    top: 16%;
+    left: 16%;
+    width: 5%;
+    opacity: 0;
+    transform: scale(0);
+    transition: all .3s ease;
+    pointer-events: none
+}
+
+.checkShow {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.checkmark1 {
+    top: -9%;
+    left: 7%;
+    width: 7%;
+}
+
+/* ========
+    swiper
+=========== */
+/* 更改按鈕圖案 */
+.swiper-slide img {
+    margin: 0 auto;
+}
+
+.swiperControl {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+
+}
+
+
+.swiperBtnR {
+    width: 13%;
+    height: 9%;
+    right: 0%;
+}
+
+.swiperBtnL {
+    width: 9.5%;
+    height: 9%;
+    left: 1%;
+}
+
+@media (max-width: 768px) {
+
+    .swiperBtnR,
+    .swiperBtnL {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media (max-width: 568px) {
+    .swiperControl {
+        scale: 0.85;
+    }
+
+    .swiperBtnR {
+        width: 13%;
+        height: 9%;
+        top: 58%;
+    }
+
+    .swiperBtnL {
+        width: 12%;
+        height: 9%;
+        top: 58%;
+    }
+}
+
+.swiperBtnR:after {
+    content: "";
+    background-image: url(../images/slider/R.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 100px;
+    height: 100%;
+}
+
+.swiperBtnL:after {
+    content: "";
+    background-image: url(../images/slider/L.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+}
+
+/* ========
+    問答
+=========== */
+.close_img {
+    width: 100%;
+    max-height: 0;
+    transition: max-height .7s cubic-bezier(1, 0.2, 0.2, 1);
+    overflow: hidden;
+}
+
+.show {
+    max-height: 5000px;
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+.QA_arrow {
+    cursor: pointer;
+    width: 4.6%;
+    right: 10%;
+    transition: all 0.8s;
+}
+
+.QA_arrow--active {
+    rotate: 180deg;
+}
+
+.arrow01 {
+    top: 62%;
+}
+
+.arrow02 {
+    top: 57%;
+}
+
+.arrow03 {
+    top: 58%;
+}
+
+.arrow04 {
+    top: 58%;
+}
+
+.arrow05 {
+    top: 58%;
+}
+
+.arrow06 {
+    top: 62%;
+}
+
+/* ========
+    popup
+=========== */
+
+
+.popUp__Btn {
+    cursor: pointer;
+}
+
+.popUp__Content {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgb(0, 0, 0, 0.8);
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+    cursor: pointer;
+}
+
+.popUp__Content .innerBox {
+    width: 90%;
+    max-width: 500px;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.popUp__Content img {
+    width: 100%;
+    position: relative;
+}
+
+.popUp__Content.active {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+}
+
+.popUp__Content .closeBtn {
+    position: absolute;
+    top: 2%;
+    right: 3%;
+    z-index: 99;
+    font-size: 40px;
+    cursor: pointer;
+    /* color: #FB8583; */
+}
+
+@media screen and (max-width: 576px) {
+    .popUp__Content .closeBtn {
+        font-size: 35px;
+        /* top: -11%; */
+    }
+}
+
+.display--none {
+    display: none;
+}
+
+#close {
+    position: fixed;
+    top: 5%;
+    right: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #7F4F21;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+.xmark1 {
+    font-size: 30px;
+    z-index: 999;
+    color: #7F4F21;
+    /* border: 1px solid;
+    padding: 0% 25%;
+    border-radius: 50%; */
+}
+
+@media (max-width:576px) {
+    .popUp__Content .innerBox {
+        width: 90%;
+        max-width: 500px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    #close {
+        position: absolute;
+        top: 2.5%;
+        right: 2.5%;
+        width: 25px;
+        height: 25px;
+    }
+
+    .xmark1 {
+        font-size: 25px;
+    }
+}
+
+.btn_natural {
+    /* background: #00000037; */
+    width: 46%;
+    height: 7%;
+    position: absolute;
+    top: 2%;
+    left: 4%;
+}
+
+.btn_natural_pink {
+    /* background: #ff030337; */
+    width: 46%;
+    height: 7%;
+    position: absolute;
+    top: 2%;
+    right: 4%;
+}
+
+/* ========
+    loading
+=========== */
+
+
+.loading {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 999;
+    background-image: url(../images/loading.png);
+    margin: 0 auto;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    /* background-color: #000; */
+}
+
+.loading>img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* 倒數計時 */
+.clockBG{
+    position: sticky;
+    max-width: 1000px;
+    margin: 0 auto;
+    top: 0%;
+    z-index: 10;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-image: url(../images/clockBG.jpg
+    );
+}
+.clock-container {
+   
+    color: #ffffff;
+    /* background: #FF6A80; */
+    padding: 0.15em 0;
+    border-radius: 0.1em;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+
+}
+
+#timer {
+    border-radius: 1.5px;
+    font-weight: bold;
+    margin: .5 .5em;
+    padding: 0 .5em;
+    letter-spacing: 0.1em;
+    color: #f9f9f9;
+}
+
+@media (max-width:768px) {
+    .clock-container {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width:549px) {
+    .clock-container {
+        font-size: 1.35rem;
+    }
+}

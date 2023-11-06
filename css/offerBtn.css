@@ -1,0 +1,131 @@
+figure {
+    margin: 0 auto;
+    width: 100%;
+    height: 180px;
+    cursor: pointer;
+    perspective: 1000px;
+    -webkit-perspective: 1000px;
+}
+
+.btn {
+
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+}
+
+figure span img {
+    margin: 0 auto;
+}
+
+figure span {
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    border: 5px solid #3558b9;
+    line-height: 50px;
+    font-size: 2rem;
+    text-align: center;
+    /* color: #958529; */
+    /* text-transform: uppercase; */
+}
+
+figure span:nth-child(1) {
+    backface-visibility: hidden;
+    transform: rotateX(0deg) translate3d(0, 0, 90px);
+    /* -webkit-transform: rotateX(0deg) translate3d(0, 0, 45px); */
+}
+
+figure span:nth-child(2) {
+
+    backface-visibility: hidden;
+    transform: rotateX(90deg) translate3d(0, 0, 90px);
+    /* -webkit-transform: rotateX(90deg) translate3d(0, 0, 45px); */
+}
+
+figure span:nth-child(3) {
+    backface-visibility: hidden;
+    transform: rotateX(180deg) translate3d(0, 0, 90px);
+    /* -webkit-transform: rotateX(180deg) translate3d(0, 0, 45px); */
+}
+
+figure span:nth-child(4) {
+    backface-visibility: hidden;
+    transform: rotateX(270deg) translate3d(0, 0, 90px);
+    /* -webkit-transform: rotateX(270deg) translate3d(0, 0, 45px); */
+}
+
+
+@media (max-width:420px) {
+    figure {
+        height: 70px;
+
+    }
+
+    figure span:nth-child(1) {
+        transform: rotateX(0deg) translate3d(0, 0, 35px);
+    }
+
+    figure span:nth-child(2) {
+
+        transform: rotateX(90deg) translate3d(0, 0, 35px);
+    }
+
+    figure span:nth-child(3) {
+        transform: rotateX(180deg) translate3d(0, 0, 35px);
+    }
+
+    figure span:nth-child(4) {
+        transform: rotateX(270deg) translate3d(0, 0, 35px);
+    }
+
+    figure span {
+        border: 2.5px solid #3558b9;
+
+    }
+}
+
+@media (max-width:380px) {
+    figure {
+        height: 65px;
+
+    }
+
+    figure span:nth-child(1) {
+        transform: rotateX(0deg) translate3d(0, 0, 32.5px);
+    }
+
+    figure span:nth-child(2) {
+
+        transform: rotateX(90deg) translate3d(0, 0, 32.5px);
+    }
+
+    figure span:nth-child(3) {
+        transform: rotateX(180deg) translate3d(0, 0, 32.5px);
+    }
+
+    figure span:nth-child(4) {
+        transform: rotateX(270deg) translate3d(0, 0, 32.5px);
+    }
+
+    figure span {
+        border: 2.5px solid #3558b9;
+
+    }
+}
+
+.rotateX {
+    animation: rotateX 3s infinite linear;
+}
+
+@keyframes rotateX {
+    0% {
+        transform: rotateX(0deg);
+    }
+
+    100% {
+        transform: rotateX(360deg);
+    }
+}
